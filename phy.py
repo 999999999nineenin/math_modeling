@@ -3,9 +3,11 @@ from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
+#
 frames = 200
 t = np.linspace(0, 5, frames)
 
+#
 def move_func(z, t):
     x, vx, y, vy = z
 
@@ -16,6 +18,7 @@ def move_func(z, t):
 
     return dx_dt, dvx_dt, dy_dt, dvy_dt
 
+#
 g = 9.8
 v = 15 
 alpha = 80 * np.pi / 180
@@ -23,7 +26,7 @@ alpha = 80 * np.pi / 180
 x0 = 0
 vx0 = v * np.cos(alpha)
 y0 = 0
-vy0 = np.sin(alpha)
+vy0 = v * np.sin(alpha)
 
 z0 = x0, vx0, y0, vy0
 
@@ -38,7 +41,7 @@ def animate(i):
     ball.set_data([sol[i] [0]], [sol[i] [2]])
     ball_line.set_data(sol[:i, 0], sol[:i, 2])
 
-ani = funcanimation(fig, animate, frames=frames, interval=30)
+ani = FuncAnimation(fig, animate, frames=frames, interval=30)
 
 edge = 15
 ax.set_xlim(0, edge)
