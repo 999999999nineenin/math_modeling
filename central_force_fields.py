@@ -46,8 +46,8 @@ def animate(i):
 ani = FuncAnimation(fig, animate, frames=frames, interval=30)
 
 plt.axis('equal')
-edge = 2* x0
-ax.xset_xlim(-edge, edge)
+edge = 2 * x0
+ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
 ani.save('earth_sun.gif')
