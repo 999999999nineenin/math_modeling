@@ -39,7 +39,7 @@ def move_func(s, t):
 def animate (i):
     for j in range(3):
         balls[j][0].set_data([sol[i, 4 * j]], [sol[i, 4 * j+2]])
-        ball_lines[j][0].set_data([sol[:i, 4 * j]], [sol[:i, 4 * j+2]])
+        balls_lines[j][0].set_data([sol[:i, 4 * j]], [sol[:i, 4 * j+2]])
 
 frames = 365
 seconds_in_year = 365 * 24 * 60 * 60
