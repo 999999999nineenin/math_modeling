@@ -117,4 +117,4 @@ edge = 2 * x10
 ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
  
-ani.save('stars.gif')
+ani.save('stars.gif', writer='pillow')
