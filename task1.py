@@ -110,7 +110,10 @@ def animate(i):
         balls[j][0].set_data(sol[i, 4*j], sol[i, 4*j+2])
         balls_lines[j][0].set_data(sol[:i, 4*j], sol[:i, 4*j+2])
  
-ani = FuncAnimation(fig, animate, frames=frames, interval=30)
+ani = FuncAnimation(fig, 
+                    animate, 
+                    frames=frames, 
+                    interval=30)
  
 plt.axis('equal')
 edge = 2 * x10
